@@ -38,3 +38,33 @@ h1 {
     color: rgb(8, 7, 5);
     font-size: 15px;
   }
+  #toggleJokes {
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+img {
+  width: 50%;
+  height: auto;
+  border-radius: 30px;
+}
+#colorChange{
+  background-color: rgb(15, 91, 91);
+  color: azure;
+  cursor: pointer;
+}
+
+#toggleJokes {
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
