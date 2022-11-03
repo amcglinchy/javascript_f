@@ -12,10 +12,10 @@ $("#toggleJokes").click(function() {
 
 
 $("#colorChange").click(function (){
-    $("body").css{
-        "background-color": "azure";
-        "color": "black";
-    }
+    $("body").css({
+        "background-color": "azure",
+        "color": "black"
+    });
 });
 
 

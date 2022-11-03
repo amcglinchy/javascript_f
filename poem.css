@@ -11,3 +11,6 @@ body{
     font-size: 15px;
     color: black;
 }
+#map {
+    height: 400px;
+  }

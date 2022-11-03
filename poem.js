@@ -16,10 +16,10 @@ $.getJSON("poem.json", function(data){ // data variable is the JSON object
       if (word.info){
         wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
       }
-      if(word.link){
-        wordString = <"a href='#' data-link='" + word.link + "'>" +
-        wordString + "</a";
-      }
+    //   if(word.link){
+    //     wordString = "<"a href='#' data-link='" + word.link + "'>" +
+    //     wordString + "</a";
+    //   }
       lineText = lineText + wordString + " "; // Add the word to the lineText variable with spacing
     });
     // Add lineText with a line break to the poemText
