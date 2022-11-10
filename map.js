@@ -47,10 +47,16 @@ const subwayWalk = L.polyline([
     [40.725368, -73.944618],
     [40.7255762, -73.9445793],
     [40.72551, -73.9454116],
-    // [40.7254699,-73.9451464],
     [40.72511,-73.9467197],
     [40.723762, -73.9505074]
 ], {
     color: 'green'
 }).addTo(poemMap);
 
+var bounds = [[40.725368, -73.944618], [40.723762, -73.9505074]];
+
+// create an orange rectangle
+L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(poemMap);
+
+// zoom the map to the rectangle bounds
+poemMap.fitBounds(bounds);
