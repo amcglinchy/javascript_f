@@ -108,10 +108,61 @@ $("#neighborhoods").on("click", "li", function(){
 
         const neighbsCoords = nyc.features.find(feature =>
             feature.properties.neighborhood === "Crown Heights").geometry.coordinates;
-            console.log(neighbsCoords);
+        
+
+        // let coordArr = nyc.features.map(feature =>
+        //     feature.geometry.coordinates);
+        
+
+        for (let i = 0; i < neighbsCoords.length; i++) {
+            for(let j = 0; j < neighbsCoords[i].length; j++){
+                neighbsCoords[i][j].reverse();
+                // var swapElements = (array, index1, index2) => {
+                    // let temp = array[index1];
+                    // array[index1] = array[index2];
+                    // array[index2] = temp;
+            }
+                };
+
+
+                // var switcheroo = function (arr, from, to){    
+                // let spL = element.splice(0,1)
+                // console.log("here",spL);
+                // element.splice(1, spL)
+                // const element2 = element[i][j];
+                // var moveInArray = function (arr, from, to) {           
+                //     // Delete the item from it's current position
+                //     let item = arr.splice(from, 1);
+                
+                //     // Move the item to its new position
+                //     arr.splice(to, 0, item[0]);
+                //     return arr
+        //         // };
+        // }};
+
+        // swapElements(neighbsCoords,0,1);
+        // console.log("new",neighbsCoords);
+                
    
-        const neighbsLine = L.polygon(neighbsCoords, {
-            color: 'green'
+        const neighbsLine = L.polyline(neighbsCoords, {
+            color: 'black'
         }).addTo(nycMap);
 
-        console.log(neighbsLine);
+        L.geoJSON(nyc, {
+            style: function(feature) {
+                // challenge 3
+                if (feature.properties.borough === "Manhattan") {
+                    return {
+                        color: "blue",
+                        fillColor: "red",
+                        fillOpacity: 0.3
+                    };
+                } else {
+                    return {
+                        color: "blue",
+                        fillColor: "yellow",
+                        fillOpacity: 0.3
+                    };
+                }
+            }
+        }).addTo(nycMap);
